@@ -8,9 +8,16 @@ public:
 	Tetris();
 	~Tetris();
 	Tetris(int ysize, int xsize);
-	void run();
-	bool Possible(Dir dir);	//범위가 밖에 나가는지, 다른 블록이 막고있는지
-	void Paint();
+	int start();
+	bool PossibleToMove(Dir dir);		//방향키 입력받았을 때 가능한 지
+	bool PossibleToRotate();			//현재 블록을 회전시킬 때 가능한 지
+	void ArrayPaint();
+	bool ArrayHorizon();
+	void BlinkBlock(int cursor_y, int cursor_x);
+	void ArrayEraseAndPull(int y);
+	void MapErase();
+	void MapPrint();
+	bool isGameEnd();
 private:
 	const int map_ysize, map_xsize;
 	void BasicPrint();

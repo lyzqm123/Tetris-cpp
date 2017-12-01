@@ -25,11 +25,10 @@ void NextBlcokBoard::BasicPrint() {
 }
 void NextBlcokBoard::SetBlockInfo(Block &src) {
 	block.SetKind(src.GetKind());
-	block.SetDir(src.GetDir());
 }
 void NextBlcokBoard::DataPrint() {
+	block.Erase(14, 48);
 	goCursor(data_ypos, data_xpos);
 	printf("      <Next>");
-	goCursor(data_ypos + 2, data_xpos);
-	printf("kind : %d, dir : %d", block.GetKind(), block.GetDir());
+	block.Print(14, 48);
 }
