@@ -1,2 +1,2 @@
-# Tetris-Reinforcement-Learning
-Tetris Reinforcement Learning
+# Tetris
+Tetris
